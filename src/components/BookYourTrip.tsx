@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function BookYourTrip() {
 	return (
@@ -27,10 +28,13 @@ export function BookYourTrip() {
 					<p className="mt-4 text-sm text-white/80">
 						Join thousands of travelers who have discovered the world with us
 					</p>
-					<Button className="mt-8 cursor-pointer h-11 gap-2.5 rounded-md bg-white px-7 text-sm font-semibold tracking-wide text-neutral-900 uppercase hover:bg-white/85">
+					<Link
+						href="/destinations"
+						className="mt-8 inline-flex h-12 items-center justify-center gap-2.5 rounded-md bg-white px-7 text-sm font-semibold tracking-wide text-neutral-900 uppercase transition-all duration-200 hover:bg-white/85 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+					>
 						Book your trip today
-						<ArrowRight className="size-4" />
-					</Button>
+						<ArrowRight className="size-4 transition-transform duration-200 group-hover:translate-x-1" />
+					</Link>
 				</div>
 			</div>
 		</section>
