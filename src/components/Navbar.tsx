@@ -13,9 +13,9 @@ const navLinks = [
 ];
 
 const accountLinks = [
-	{ label: "Profile", href: "profile", icon: UserRound },
-	{ label: "Login", href: "login", icon: undefined },
-	{ label: "Sign Up", href: "sign-up", icon: undefined },
+	{ label: "Profile", href: "/my-profile", icon: UserRound },
+	{ label: "Login", href: "/login", icon: undefined },
+	{ label: "Sign Up", href: "/sign-up", icon: undefined },
 ];
 
 export function Navbar() {
