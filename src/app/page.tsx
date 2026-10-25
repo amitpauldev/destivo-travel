@@ -8,16 +8,12 @@ import { Footer } from "@/components/Footer";
 
 export default function Home() {
 	return (
-		<>
-			<Navbar />
-			<main className="flex-1">
-				<HeroSection />
-				<FeaturedSection />
-				<WhyChooseUs />
-				<ReviewSection />
-				<BookYourTrip />
-			</main>
-			<Footer />
-		</>
+		<main className="flex-1">
+			<HeroSection />
+			<FeaturedSection />
+			<WhyChooseUs />
+			<ReviewSection />
+			<BookYourTrip />
+		</main>
 	);
 }

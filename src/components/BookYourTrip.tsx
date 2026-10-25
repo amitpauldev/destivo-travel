@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export function BookYourTrip() {
 	return (
-		<section className="relative mx-auto w-screen flex items-center">
+		<section className="w-full relative mx-auto flex items-center">
 			{/* Banner image on top edge */}
 
 			<div className="absolute w-full bg-black/70 h-100"></div>

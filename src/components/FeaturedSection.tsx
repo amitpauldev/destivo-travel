@@ -1,15 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
-import {
-	ArrowLeft,
-	ArrowRight,
-	MoveUpRight,
-	MapPin,
-	Building2,
-	Star,
-} from "lucide-react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import {
 	Carousel,
 	CarouselContent,
@@ -18,6 +10,8 @@ import {
 } from "@/components/ui/carousel";
 
 import { Button } from "@/components/ui/button";
+import { DestinationCard } from "@/components/DestinationCard";
+import Link from "next/link";
 
 const destinations = [
 	{
@@ -100,6 +94,7 @@ export function FeaturedSection() {
 					<Button
 						variant="outline"
 						className="cursor-pointer gap-2 self-start border-[#0891b2] px-6 text-sm font-semibold tracking-wide text-[#0891b2] uppercase hover:bg-[#0891b2]/5 hover:text-[#0891b2] sm:self-auto"
+						render={<Link href="/destinations" />}
 					>
 						All destinations
 						<ArrowRight className="size-4" />
@@ -118,50 +113,7 @@ export function FeaturedSection() {
 								key={destination.title}
 								className="basis-full sm:basis-1/2 xl:basis-[45%]"
 							>
-								<article className="group">
-									<div className="relative aspect-[3/2] overflow-hidden rounded-lg">
-										<Image
-											src={destination.image}
-											alt={destination.title}
-											fill
-											sizes="(min-width: 1280px) 45vw, (min-width: 640px) 50vw, 100vw"
-											className="object-cover transition-transform duration-500 group-hover:scale-105"
-										/>
-										<div className="absolute top-4 right-4 flex items-center gap-1.5 rounded-md bg-foreground/70 px-2.5 py-1 text-sm font-semibold text-white backdrop-blur-xs">
-											{destination.rating}
-											<Star className="size-3.5 fill-current" />
-										</div>
-									</div>
-
-									<div className="pt-5">
-										<div className="flex items-center gap-1.5 text-sm text-foreground">
-											<MapPin className="size-4 text-muted-foreground" />
-											{destination.country}
-										</div>
-										<div className="mt-1.5 flex items-baseline justify-between gap-4">
-											<h3 className="text-2xl font-medium tracking-tight text-foreground">
-												{destination.title}
-											</h3>
-											<p className="text-2xl font-medium tracking-tight text-foreground">
-												{destination.price}
-												<span className="text-sm font-normal text-muted-foreground">
-													/Person
-												</span>
-											</p>
-										</div>
-										<div className="mt-1.5 flex items-center gap-1.5 text-sm text-foreground">
-											<Building2 className="size-4 text-muted-foreground" />
-											{destination.duration}
-										</div>
-										<a
-											href="#"
-											className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold tracking-wide text-[#0891b2] uppercase transition-colors hover:text-[#077d99]"
-										>
-											Book now
-											<MoveUpRight className="size-4" />
-										</a>
-									</div>
-								</article>
+								<DestinationCard destination={destination} />
 							</CarouselItem>
 						))}
 					</CarouselContent>
