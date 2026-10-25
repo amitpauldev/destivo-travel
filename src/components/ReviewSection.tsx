@@ -103,7 +103,7 @@ export function ReviewSection() {
 						{reviews.map((review) => (
 							<CarouselItem
 								key={review.name}
-								className="basis-full sm:basis-1/2"
+								className="basis-full md:basis-1/2"
 							>
 								<article className="flex h-full gap-5 rounded-lg border border-border bg-white p-6">
 									<div className="flex min-w-0 flex-1 flex-col">
