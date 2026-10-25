@@ -1,5 +1,15 @@
-import Image from "next/image";
+import { Navbar } from "@/components/Navbar";
+import { HeroSection } from "@/components/HeroSection";
+import { FeaturedSection } from "@/components/FeaturedSection";
 
 export default function Home() {
-	return <div></div>;
+	return (
+		<>
+			<Navbar />
+			<main className="flex-1">
+				<HeroSection />
+				<FeaturedSection />
+			</main>
+		</>
+	);
 }
