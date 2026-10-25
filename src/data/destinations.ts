@@ -67,3 +67,39 @@ export const allDestinations: DestinationWithCategory[] = [
 		category: "Culture",
 	},
 ];
+
+export type Booking = {
+	id: string;
+	image: string;
+	title: string;
+	status: "Confirmed" | "Pending";
+	departure: string;
+	price: number;
+};
+
+export const bookings: Booking[] = [
+	{
+		id: "b1",
+		image: "/assets/destinations/image1.png",
+		title: "Bali Paradise",
+		status: "Confirmed",
+		departure: "May 15, 2026",
+		price: 1299,
+	},
+	{
+		id: "b2",
+		image: "/assets/destinations/image2.png",
+		title: "Bora Bora Overwater",
+		status: "Confirmed",
+		departure: "March 24, 2026",
+		price: 1299,
+	},
+	{
+		id: "b3",
+		image: "/assets/destinations/image3.png",
+		title: "Venice & Italian Riviera",
+		status: "Pending",
+		departure: "May 15, 2026",
+		price: 1299,
+	},
+];

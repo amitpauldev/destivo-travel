@@ -91,14 +91,13 @@ export function FeaturedSection() {
 							Handpicked travel experiences for the adventure seekers
 						</p>
 					</div>
-					<Button
-						variant="outline"
-						className="cursor-pointer gap-2 self-start border-[#0891b2] px-6 text-sm font-semibold tracking-wide text-[#0891b2] uppercase hover:bg-[#0891b2]/5 hover:text-[#0891b2] sm:self-auto"
-						render={<Link href="/destinations" />}
+					<Link
+						href="/destinations"
+						className="inline-flex items-center justify-center rounded-md bg-[#0891b2] px-7 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#077d99]"
 					>
-						All destinations
+						View all destinations All destinations
 						<ArrowRight className="size-4" />
-					</Button>
+					</Link>
 				</div>
 
 				{/* Cards carousel */}
